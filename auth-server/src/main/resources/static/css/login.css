@@ -1,0 +1,115 @@
+
+.login-form {
+    width: 500px;
+    height: 500px;
+    background: #fff;
+    color: #333333;
+    border: 1px solid #161F60;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    margin-right: 10%;
+    position: relative;
+
+}
+
+.table {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.scan {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.scan-bg {
+    width: 200px;
+    height: 200px;
+}
+
+.scan-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form div {
+    margin-bottom: 30px;
+}
+
+.parent-div {
+    width:100%;
+    height: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-image: url("../images/login.png");
+    background-size: 100%;
+}
+
+.title {
+   border-bottom: 1px solid gainsboro;
+   width: 100%;
+   height: 100px;
+   font-size: 20px;
+   margin-bottom: 60px!important;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.small-img {
+    height: 40px;
+    width: 90px;
+    text-align: center;
+    color: blue;
+    letter-spacing:3px;
+    font-weight:bolder;
+    margin-right: 30px;
+ }
+.small-input {
+    height: 30px;
+    width: 100px;
+    border-bottom: 1px solid gainsboro!important;
+    border-radius: 5px;
+}
+.small-button {
+    background-color: #fff;
+    color: blue;
+    width: 50px;
+    height: 20px;
+}
+.verification-code {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    width: 100%;
+}
+
+input {
+    height: 40px;
+    width: 260px;
+    border: 1px solid gainsboro!important;
+    border-radius: 5px;
+    padding-left: 10px!important;
+ }
+input[placeholder], [placeholder], *[placeholder] {
+    font-size: 14px !important;
+ }
+button {
+    width: 340px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #161F60;
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*margin: 30px!important;*/
+}

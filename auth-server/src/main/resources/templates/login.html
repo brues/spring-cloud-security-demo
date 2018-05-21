@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html style="overflow-y: scroll;height: 100%;" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<title>登录页面</title>
+	<link type="text/css" rel="stylesheet" th:href="@{/css/login.css}" />
+	<link type="text/css" rel="stylesheet" th:href="@{/css/reset.css}" />
+	<script th:src="@{/js/jquery.min.js}"></script>
+    <script th:src="@{/js/jquery.cookie.js}"></script>
+	<script th:src="@{/js/GVerify.js}"></script>
+</head>
+<body style="height: 100%;">
+<div class="parent-div" style="height: 100%;">
+        <form id="loginform" class="login-form" role="form" action="/login" th:action="@{/login}" method="post">
+            <div class="title">
+                <img style="margin-right: 10px;" width="30px" height="30px" th:src="@{/images/login.png}" alt=""/>
+                <span>登录页面</span>
+            </div>
+
+            <div onclick="show()">
+                <img width="64px" height="64px" style="display: block; width: 64px; height: 64px; max-height: 64px;" id="img" class="scan" th:src="@{/images/scan.png}"/>
+            </div>
+
+
+
+            <div style="display: block;" id="table">
+                <div class="table">
+                    <div> 账  号：<input th:placeholder="请输入账号" placeholder="请输入账号" th:id="username" id="username" name="username" type="text"/></div>
+                    <div> 密  码：<input th:placeholder="请输入密码" placeholder="请输入密码" th:id="password" id="password" type="password" name="password" /></div>
+                    <button type="submit">登 录</button>
+                </div>
+            </div>
+        </form>
+	</div>
+</body>
+</html>

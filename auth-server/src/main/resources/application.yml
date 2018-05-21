@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: auth-server
+  profiles:
+    active: eureka,security
+  thymeleaf:
+    cache: false
+    check-template-location: true
+    suffix: .html
+    encoding: UTF-8
+    content-type: text/html
+server:
+  session:
+    timeout: 5000
+  port: 8099
+  contextPath: /auth
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+        loggerLevel: basic
