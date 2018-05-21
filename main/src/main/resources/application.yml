@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: main
+  profiles:
+    active: eureka,security,default
+server:
+  session:
+    timeout: 5000
+  port: 8010
+feign:
+  oauth2:
+    enabled: true
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+        loggerLevel: basic
+    
