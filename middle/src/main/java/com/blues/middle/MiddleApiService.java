@@ -1,6 +1,6 @@
 package com.blues.middle;
 
-import com.blues.common.MiddleApi;
+import com.blues.security.common.MiddleApi;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 
