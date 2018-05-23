@@ -4,25 +4,18 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.blues.auth</groupId>
+    <groupId>com.blues.security</groupId>
     <artifactId>auth-server</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-
     <packaging>jar</packaging>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>1.5.10.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
 
     <properties>
-        <druid.version>1.1.6</druid.version>
-        <ojdbc6.version>11.2.0.3</ojdbc6.version>
-        <mybatis-spring-boot-starter.version>1.3.0</mybatis-spring-boot-starter.version>
-        <kf-imes-common.version>18C-SNAPSHOT</kf-imes-common.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>

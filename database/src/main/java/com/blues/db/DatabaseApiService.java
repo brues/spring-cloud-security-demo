@@ -1,5 +1,5 @@
 package com.blues.db;
-import com.blues.common.DatabaseApi;
+import com.blues.security.common.DatabaseApi;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController

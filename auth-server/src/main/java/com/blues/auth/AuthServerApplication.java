@@ -1,5 +1,6 @@
 package com.blues.auth;
 
+import com.blues.auth.config.DbUserLoginService;
 import org.apache.coyote.http11.AbstractHttp11Protocol;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
@@ -45,9 +46,9 @@ import java.security.KeyPair;
 @EnableFeignClients
 @SpringBootApplication
 @SessionAttributes("authorizationRequest")
-public class AuthApplication extends WebMvcConfigurerAdapter {
+public class AuthServerApplication extends WebMvcConfigurerAdapter {
 	public static void main(String[] args) {
-		SpringApplication.run(AuthApplication.class, args);
+		SpringApplication.run(AuthServerApplication.class, args);
 	}
 
 
@@ -109,13 +110,13 @@ public class AuthApplication extends WebMvcConfigurerAdapter {
         protected void configure(AuthenticationManagerBuilder auth) throws Exception {
             auth.parentAuthenticationManager(authenticationManager);
             //认证方式
-            auth.userDetailsService(customUserDetailsServiceImpl).passwordEncoder(passwordEncoder());
+            auth.userDetailsService(dbUserLoginService).passwordEncoder(passwordEncoder());
         }
 
 
 
         @Autowired
-        private CustomUserDetailsServiceImpl customUserDetailsServiceImpl;
+        private DbUserLoginService dbUserLoginService;
 
         /**
          * 密码加密
@@ -163,10 +164,8 @@ public class AuthApplication extends WebMvcConfigurerAdapter {
         }
 
         @Override
-        public void configure(AuthorizationServerSecurityConfigurer oauthServer)
-                throws Exception {
-            oauthServer.tokenKeyAccess("permitAll()").checkTokenAccess(
-                    "isAuthenticated()");
+        public void configure(AuthorizationServerSecurityConfigurer oauthServer) throws Exception {
+            oauthServer.tokenKeyAccess("permitAll()").checkTokenAccess("isAuthenticated()");
         }
 
     }

@@ -1,4 +1,4 @@
-package com.blues.auth;
+package com.blues.auth.config;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.User;
@@ -17,7 +17,7 @@ import java.util.Collections;
  * @since 2018/5/10.
  */
 @Service
-public class CustomUserDetailsServiceImpl implements UserDetailsService {
+public class DbUserLoginService implements UserDetailsService {
 
     private final BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 
